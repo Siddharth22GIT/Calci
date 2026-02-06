@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            display: flex;
+            width: max-content;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calculator {
+            h1{
+                color: #8edf0a;
+            }
+            background-color: black;
+            color: white;
+            width: 400px;
+            height: 650px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .input-space {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            input {
+                text-align: center;
+                height: 50px;
+                width: 180px;
+                border-radius: 5px;
+                font-size: 30px;
+            }
+        }
+
+        .res {
+            background-color: white;
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            font-size: 40px;
+            padding: 10px;
+            text-align: center;
+            margin-left: 5.5px;
+            height: 50px;
+            width: 370px;
+            border-radius: 5px;
+            font-size: 30px;
+        }
+
+        .number {
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            display: flex;
+            flex-direction: column;
+            button {
+                font-weight: bolder;
+                border-radius: 10px;
+                font-size: 20px;
+                height: 47px;
+                width: 270px;
+            }
+
+            button:hover{
+                background-color: gray;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function add() {
+            let n1 = Number(document.getElementById('num1').value)
+            let n2 = Number(document.getElementById('num2').value)
+            let result = n1 + n2
+            document.getElementById('result').innerText = result
+        }
+
+        function sub() {
+            let n1 = Number(document.getElementById('num1').value)
+            let n2 = Number(document.getElementById('num2').value)
+            let result = n1 - n2
+            document.getElementById('result').innerText = result
+        }
+
+        function mul() {
+            let n1 = Number(document.getElementById('num1').value)
+            let n2 = Number(document.getElementById('num2').value)
+            let result = n1 * n2
+            document.getElementById('result').innerText = result
+
+        }
+
+        function divi() {
+            let n1 = Number(document.getElementById('num1').value)
+            let n2 = Number(document.getElementById('num2').value)
+            let result = n1 / n2
+            document.getElementById('result').innerText = result
+
+        }
+
+        function mod() {
+            let n1 = Number(document.getElementById('num1').value)
+            let n2 = Number(document.getElementById('num2').value)
+            let result = n1 % n2
+            document.getElementById('result').innerText = result
+        }
+        function clr() {
+            let n1 = Number(document.getElementById('num1').value)
+            let n2 = Number(document.getElementById('num2').value)
+            let clean = document.getElementById('clear')
+            let numb1 = document.getElementById('num1')
+            let numb2 = document.getElementById('num2')
+
+            let result = " "
+            
+            clean.addEventListener('click', function() {
+                numb1.value = ''
+                numb2.value = ''
+            document.getElementById('result').innerText = result
+            })
+        }
+
+
+    </script>
+    <div class="calculator">
+        <h1>CALCULATOR</h1>
+        <div class="input-space">
+            <input type="number" name="number1" id="num1" placeholder="  Number 1">
+            <input type="number" name="number2" id="num2" placeholder="  Number 2">
+        </div>
+        <p class="res" id="result"></p>
+        <hr>
+            <div class="number">
+                <button onclick="add()">ADD</button>
+                <button onclick="sub()">SUB</button>
+                <button onclick="mul()">MUL</button>
+                <button onclick="divi()">DIV</button>
+                <button onclick="mod()">MOD</button>
+                <button onclick="clr()" id="clear">CLEAR</button>
+            </div>
+    </div>
+</body>
+
+</html>
