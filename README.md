@@ -1,1 +1,0 @@
-## Enjoy using this calculator 🧮
