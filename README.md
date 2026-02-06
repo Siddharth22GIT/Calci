@@ -1,1 +1,1 @@
-## The Calculator 🧮
+## Have fun using Calci 🧮
